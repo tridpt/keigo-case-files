@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hồ Sơ Higashino — Game Phá Án Trinh Thám Keigo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <canvas id="ambient-canvas"></canvas>
+  <header class="topbar">
+    <div class="brand" onclick="window.KeigoApp && window.KeigoApp.backToLobby()">
+      <div class="brand-seal">圭</div>
+      <div>
+        <div class="brand-title">HỒ SƠ ĐẠI KỲ ÁN</div>
+        <div class="brand-sub">Higashino Keigo · Shin-Honkaku Nhật Bản · Kinh Điển Thế Giới (18 Hồ Sơ)</div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn btn-sm" id="btn-bgm" onclick="
+        const on = window.NoirAudio.toggleBgm();
+        this.textContent = on ? '🎵 Nhạc nền: BẬT' : '🎵 Nhạc nền: TẮT';
+      ">🎵 Nhạc nền: TẮT</button>
+      <button class="btn btn-sm" id="btn-mute" onclick="
+        const m = window.NoirAudio.toggleMute();
+        this.textContent = m ? '🔇 Âm thanh: TẮT' : '🔊 Âm thanh: BẬT';
+      ">🔊 Âm thanh: BẬT</button>
+    </div>
+  </header>
+
+  <main class="container" id="app-root"></main>
+  <div id="modal-root"></div>
+  <div id="break-overlay-root"></div>
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- 9 Vụ án Higashino Keigo -->
+  <script charset="utf-8" src="/js/cases/01-suspect-x.js"></script>
+  <script charset="utf-8" src="/js/cases/02-saint.js"></script>
+  <script charset="utf-8" src="/js/cases/03-malice.js"></script>
+  <script charset="utf-8" src="/js/cases/04-newcomer.js"></script>
+  <script charset="utf-8" src="/js/cases/05-white-night.js"></script>
+  <script charset="utf-8" src="/js/cases/06-masquerade-hotel.js"></script>
+  <script charset="utf-8" src="/js/cases/13-midsummer-equation.js"></script>
+  <script charset="utf-8" src="/js/cases/14-silent-parade.js"></script>
+  <script charset="utf-8" src="/js/cases/15-red-finger.js"></script>
+
+  <!-- 9 Đại kỳ án Shin-Honkaku Nhật Bản & Kinh điển Thế giới -->
+  <script charset="utf-8" src="/js/cases/07-decagon-house.js"></script>
+  <script charset="utf-8" src="/js/cases/08-tokyo-zodiac.js"></script>
+  <script charset="utf-8" src="/js/cases/09-inugami-curse.js"></script>
+  <script charset="utf-8" src="/js/cases/10-roger-ackroyd.js"></script>
+  <script charset="utf-8" src="/js/cases/11-hollow-man.js"></script>
+  <script charset="utf-8" src="/js/cases/12-orient-express.js"></script>
+  <script charset="utf-8" src="/js/cases/16-clock-mansion.js"></script>
+  <script charset="utf-8" src="/js/cases/17-honjin-murder.js"></script>
+  <script charset="utf-8" src="/js/cases/18-and-then-none.js"></script>
+
+  <!-- Visuals, Audio & Core Game Engine -->
+  <script charset="utf-8" src="/js/visuals.js"></script>
+  <script charset="utf-8" src="/js/audio.js"></script>
+  <script charset="utf-8" src="/js/app.js"></script>
+</body>
+</html>

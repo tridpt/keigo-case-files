@@ -1,0 +1,20 @@
+{
+  "name": "keigo-case-files",
+  "version": "1.0.0",
+  "description": "Hồ Sơ Higashino — Game phá án trinh thám phỏng theo các vụ án trong tiểu thuyết của Higashino Keigo (Port 4150)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/validate-cases.js"
+  },
+  "keywords": [
+    "detective-game",
+    "mystery",
+    "higashino-keigo",
+    "galileo",
+    "kaga-kyoichiro",
+    "fan-game"
+  ],
+  "author": "AI_App Ecosystem",
+  "license": "MIT"
+}
